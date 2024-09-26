@@ -80,12 +80,7 @@ class RawDelightToastState extends State<RawDelightToast> {
       duration: Duration(milliseconds: widget.animationDuration.inMilliseconds),
       key: positionedKey,
       curve: Curves.easeOutBack,
-      top: widget.snackbarPosition == DelightSnackbarPosition.top
-          ? widget.getPosition() + 70
-          : null,
-      bottom: widget.snackbarPosition == DelightSnackbarPosition.bottom
-          ? widget.getPosition() + 70
-          : null,
+      top: MediaQuery.of(context).size.height / 2,
       left: 0,
       right: 0,
       child: Material(
